@@ -125,4 +125,27 @@ const Dashboard: React.FC = () => {
                 </div>
                 <div>
                     <h2 className="text-xl font-bold text-slate-800">Tommy</h2>
-                    <p className="text
+                    <p className="text-xs text-slate-400">Strict Coach Mode</p>
+                </div>
+             </div>
+        </div>
+      </div>
+
+      <h2 className="text-xl font-bold text-slate-800 mb-6">Device Status</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {MOCK_DEVICES.map(device => (
+            <DeviceCard key={device.id} device={device} />
+        ))}
+        {/* Add Device Card */}
+        <div className="border-2 border-dashed border-slate-300 rounded-2xl flex flex-col items-center justify-center p-6 text-slate-400 hover:border-indigo-400 hover:text-indigo-500 hover:bg-indigo-50 transition-all cursor-pointer h-full min-h-[240px]">
+            <div className="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center mb-3">
+                <span className="text-2xl font-light">+</span>
+            </div>
+            <p className="font-medium">Bind New Core</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Dashboard;
